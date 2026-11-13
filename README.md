@@ -7,13 +7,13 @@ A static Angular portfolio built with Angular 22. It includes selected projects,
 Install dependencies once:
 
 ```powershell
-npm.cmd install
+npm install
 ```
 
 Start the development server:
 
 ```powershell
-npm.cmd start
+npm start
 ```
 
 Open `http://localhost:4200/` in your browser. Angular CLI serves the site and reloads it when source files change.
@@ -21,7 +21,7 @@ Open `http://localhost:4200/` in your browser. Angular CLI serves the site and r
 ## Production build
 
 ```powershell
-npm.cmd run build
+npm run build
 ```
 
 The built static site is written to `dist/`.
