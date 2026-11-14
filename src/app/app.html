@@ -1,37 +1,11 @@
-﻿<div class="site-shell" [class.dark-theme]="isDarkMode">
-<header class="topbar">
-    <a class="wordmark" href="#home" aria-label="Muhammad Sulaimaan, home">MS<span>.</span></a>
-    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-    <div class="header-actions"><a class="availability" href="#contact"><span></span> Available for opportunities</a><button class="theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-pressed]="isDarkMode" [attr.aria-label]="isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'"><span aria-hidden="true">{{ isDarkMode ? '☀' : '☾' }}</span></button></div>
-  </header>
-  <main id="home">
-    <section class="hero section-wrap">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> PORTFOLIO · 2026</p>
-        <h1>Building useful<br><span>software, end to end.</span></h1>
-        <p class="intro">Hi, I’m <strong>Muhammad Sulaimaan</strong> — a Java Full Stack Developer building scalable services with Spring Boot and responsive applications with Angular.</p>
-        <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span>↘</span></a><a class="text-link" href="#about">A little about me <span>↓</span></a></div>
-      </div>
-      <div class="hero-art" aria-label="Decorative abstract shapes"><div class="art-label">IDEAS INTO<br>REALITY <span>✳</span></div><div class="sun"></div><div class="ring ring-one"></div><div class="ring ring-two"></div><div class="art-index">01 / 04</div></div>
-      <div class="hero-foot"><span>BASED IN CHENNAI, INDIA</span><span>SCROLL TO DISCOVER ↓</span></div>
-    </section>
-    <section id="work" class="work-section section-wrap">
-      <div class="section-heading"><div><p class="eyebrow">01 — SELECTED WORK</p><h2>Systems built<br>to do real work.</h2></div><p class="section-note">Full stack product development, cloud deployment, and applied AI orchestration.</p></div>
-      <div class="project-grid">
-        <article class="project-card project-large"><a class="project-image project-image-one" href="#contact" aria-label="E-commerce microservices platform"><span class="project-number">01</span><span class="project-shape shape-one"></span><span class="image-caption">COMMERCE<br>PLATFORM</span><span class="arrow-circle">↗</span></a><div class="project-meta"><div><h3>E-Commerce Microservices Platform</h3><p>Modular commerce services and Angular experiences for catalog, cart, checkout, and order tracking.</p></div><span>JAVA · ANGULAR · AWS</span></div></article>
-        <article class="project-card project-small"><a class="project-image project-image-two" href="#contact" aria-label="Amazon Bedrock AI agent"><span class="project-number">02</span><span class="project-shape shape-two"></span><span class="image-caption">RAG<br>AGENT</span><span class="arrow-circle">↗</span></a><div class="project-meta"><div><h3>Grounded AI Agent</h3><p>Amazon Bedrock agent with a RAG pipeline, Knowledge Bases, and OpenSearch vector retrieval, integrated with Spring Boot.</p></div><span>BEDROCK · RAG</span></div></article>
-        <article class="project-card project-small"><a class="project-image project-image-three" href="#contact" aria-label="Cloud-native full stack engineering"><span class="project-number">03</span><span class="project-shape shape-three"></span><span class="image-caption">CLOUD<br>DELIVERY</span><span class="arrow-circle">↗</span></a><div class="project-meta"><div><h3>Cloud-Ready Full Stack Delivery</h3><p>Spring Boot and Angular applications deployed with AWS, secure IAM roles, CI/CD, and production support.</p></div><span>SPRING · AWS</span></div></article>
-      </div>
-    </section>
-    <section id="about" class="about-section"><div class="about-inner section-wrap"><div class="about-stamp">JAVA<br>FULL STACK<br><span>DEVELOPER ✳</span></div><div class="about-copy"><p class="eyebrow">02 — THE PERSON BEHIND THE WORK</p><h2>From APIs to<br>cloud deployment.</h2><p>I’m a Chennai-based Java Full Stack Developer with 3 years of experience building Spring Boot services and Angular applications. My work spans REST APIs, microservices, AWS deployments, CI/CD, and production support. I enjoy taking ownership from implementation through delivery and collaborating closely with clients and teammates.</p><div class="skills"><span>Java &amp; Spring Boot</span><span>Angular &amp; TypeScript</span><span>AWS &amp; CI/CD</span><span>Microservices</span><span>Amazon Bedrock &amp; RAG</span><span>SQL &amp; PostgreSQL</span></div></div></div></section>
-    <section class="experience-section section-wrap"><div class="section-heading"><div><p class="eyebrow">03 — THE JOURNEY</p><h2>Experience &amp;<br>education.</h2></div><p class="section-note">Software engineering, full stack delivery, and a foundation in mechatronics engineering.</p></div><div class="timeline">
-      <div class="timeline-row"><span class="timeline-date">2024 — NOW</span><div><h3>Software Engineer · LTM (formerly LTIMindtree)</h3><p>Java and Spring Boot services, Angular applications, AWS deployments, AI agent development, and end-to-end delivery.</p></div><span class="timeline-location">CHENNAI</span></div>
-      <div class="timeline-row"><span class="timeline-date">SEP 2023 — MAY 2024</span><div><h3>Java Full Stack Engineer Intern · LTIMindtree</h3><p>Full stack engineering internship.</p></div><span class="timeline-location">INDIA</span></div>
-      <div class="timeline-row"><span class="timeline-date">2019 — 2023</span><div><h3>B.E. Mechatronics Engineering · Sona College of Engineering</h3><p>Bachelor of Engineering.</p></div><span class="timeline-location">INDIA</span></div>
-      <div class="timeline-row"><span class="timeline-date">2024</span><div><h3>Certified Ethical Hacker · EC-Council</h3><p>Team Player Award for collaboration and supporting successful project delivery.</p></div><span class="timeline-location">CERTIFICATION</span></div>
-    </div></section>
-    <section id="contact" class="contact-section"><div class="contact-inner section-wrap"><p class="eyebrow">04 — SAY HELLO</p><h2>Have something<br>good in mind<span>?</span></h2><p>Choose a note to start a prefilled email, or book a time to talk.</p><div class="contact-choices"><a class="contact-choice" href="mailto:sulaimaan.works@gmail.com?subject=Interested%20in%20hiring%20you&body=Hi%20Muhammad%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20role.%0D%0A%0D%0AHere%E2%80%99s%20a%20little%20about%20the%20opportunity%3A%0D%0A%0D%0ARegards%2C%0D%0A">Interested in hiring you <span>↗</span></a><a class="contact-choice" href="https://calendar.app.google/oArVS3S9dbDfCv6Q7" target="_blank" rel="noreferrer">Book a Google Meet <span>↗</span></a></div><a class="contact-email" href="mailto:sulaimaan.works@gmail.com">sulaimaan.works@gmail.com <span>↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/muhammadsulaimaan" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/sulaimaangit" target="_blank" rel="noreferrer">GitHub ↗</a><a href="tel:+919952658865">+91 99526 58865 ↗</a></div></div></section>
+<div class="site-shell" [class.dark-theme]="isDarkMode">
+  <app-header [isDarkMode]="isDarkMode" (themeToggle)="toggleTheme()" />
+  <main>
+    <router-outlet />
   </main>
-  <footer><a class="wordmark" href="#home">MS<span>.</span></a><span>DESIGNED WITH INTENTION · © {{ currentYear }}</span><a href="#home">BACK TO TOP ↑</a></footer>
+  <footer>
+    <a class="wordmark" routerLink="/">MS<span>.</span></a>
+    <span>DESIGNED WITH INTENTION · © {{ currentYear }}</span>
+    <a routerLink="/">BACK TO TOP ↑</a>
+  </footer>
 </div>
-

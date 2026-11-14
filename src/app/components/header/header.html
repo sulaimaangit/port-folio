@@ -1,0 +1,14 @@
+<header class="topbar">
+  <a class="wordmark" routerLink="/" aria-label="Muhammad Sulaimaan, home">MS<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a routerLink="/work">Work</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/contact">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <a class="availability" routerLink="/contact"><span></span> Available for opportunities</a>
+    <button class="theme-toggle" type="button" (click)="themeToggle.emit()" [attr.aria-pressed]="isDarkMode" [attr.aria-label]="isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'">
+      <span aria-hidden="true">{{ isDarkMode ? '☀' : '☾' }}</span>
+    </button>
+  </div>
+</header>
