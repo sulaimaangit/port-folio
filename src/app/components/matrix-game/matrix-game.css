@@ -1,0 +1,113 @@
+:host {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+
+.mini-game {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.game-topline,
+.game-footer {
+  min-height: 22px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font: 9px var(--mono);
+  letter-spacing: 0.06em;
+}
+
+.game-topline span:last-child,
+.game-footer strong {
+  color: var(--accent);
+}
+
+.game-arena {
+  position: relative;
+  flex: 1;
+  min-height: 150px;
+  overflow: hidden;
+  border: 1px dashed var(--line);
+  background-image: linear-gradient(rgba(0, 255, 65, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.game-start-panel {
+  position: absolute;
+  inset: 0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-prompt,
+.game-result {
+  margin: 0;
+  color: var(--accent);
+  font: 10px var(--mono);
+  letter-spacing: 0.06em;
+}
+
+.game-instructions {
+  max-width: 280px;
+  margin: 10px 0 14px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.game-result {
+  margin-bottom: 12px;
+  color: var(--text-soft);
+}
+
+.game-start {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font: 9px var(--mono);
+  cursor: pointer;
+}
+
+.game-target {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 14px var(--accent-soft);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: left 0.16s ease-out, top 0.16s ease-out, background-color 0.16s ease-out;
+}
+
+.game-target:hover {
+  background: var(--heading-soft);
+}
+
+.game-start:focus-visible,
+.game-target:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-target {
+    transition: none;
+  }
+}

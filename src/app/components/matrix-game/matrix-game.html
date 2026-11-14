@@ -1,0 +1,31 @@
+<div class="mini-game">
+  <div class="game-topline">
+    <span>CODE CATCH</span>
+    <span>{{ secondsLeft() }}s</span>
+  </div>
+  <div class="game-arena">
+    @if (isGameRunning()) {
+      <button
+        class="game-target"
+        type="button"
+        [style.left.%]="targetX()"
+        [style.top.%]="targetY()"
+        aria-label="Catch the green signal"
+        (click)="catchSignal()"
+      ></button>
+    } @else {
+      <div class="game-start-panel">
+        <p class="game-prompt">{{ secondsLeft() === 0 ? 'SESSION COMPLETE' : 'CATCH THE SIGNAL' }}</p>
+        <p class="game-instructions">Click the moving signal to capture as many as you can before time runs out.</p>
+        @if (secondsLeft() === 0) {
+          <p class="game-result">Signals captured: {{ score() }}</p>
+        }
+        <button class="game-start" type="button" (click)="startGame()">{{ secondsLeft() === 0 ? 'PLAY AGAIN' : 'START GAME' }}</button>
+      </div>
+    }
+  </div>
+  <div class="game-footer">
+    <span>CAPTURED: <strong>{{ score() }}</strong></span>
+    <span aria-live="polite">{{ isGameRunning() ? 'RUNNING' : secondsLeft() === 0 ? 'COMPLETE' : 'READY' }}</span>
+  </div>
+</div>

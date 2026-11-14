@@ -1,6 +1,5 @@
 .about-section {
   min-height: 100%;
-  background: var(--paper);
   padding: clamp(52px, 8vw, 112px) 0;
 }
 

@@ -1,0 +1,32 @@
+<div class="hero-art">
+  <div class="visual-toolbar">
+    <span class="visual-label"><span class="terminal-dot"></span></span>
+    <div class="visual-switch" role="group" aria-label="Choose homepage visual">
+      <button type="button" [class.active]="activeView === 'terminal'" [attr.aria-pressed]="activeView === 'terminal'" (click)="selectView('terminal')">CODE</button>
+      <button type="button" [class.active]="activeView === 'game'" [attr.aria-pressed]="activeView === 'game'" (click)="selectView('game')">PLAY</button>
+    </div>
+  </div>
+  <div class="visual-stage">
+    @if (activeView === 'terminal') {
+      <div class="terminal-view" aria-label="Matrix-style code terminal">
+        <div class="terminal-topbar">
+          <span>~/SULAIMAAN</span>
+          <span class="terminal-online"><span class="terminal-dot"></span> ONLINE</span>
+        </div>
+        <div class="terminal-content">
+          <p class="terminal-command"><span>root@portfolio</span>:~$ ./system-check</p>
+          <div class="terminal-code">
+            <p><span class="line-number">01</span> <span class="code-keyword">const</span> stack = [<span class="code-string">'Java'</span>, <span class="code-string">'Angular'</span>];</p>
+            <p><span class="line-number">02</span> <span class="code-keyword">const</span> api = <span class="code-string">'Spring Boot'</span>;</p>
+            <p><span class="line-number">03</span> <span class="code-keyword">const</span> cloud = <span class="code-string">'AWS'</span>;</p>
+            <p><span class="line-number">04</span> <span class="code-keyword">return</span> <span class="code-string">'SYSTEM_READY'</span>;</p>
+          </div>
+          <p class="terminal-status"><span class="terminal-dot"></span> BUILD STATUS: READY<span class="terminal-cursor" aria-hidden="true"></span></p>
+        </div>
+        <div class="terminal-bottom"><span>END-TO-END</span><span>BUILD / 001</span></div>
+      </div>
+    } @else {
+      <app-matrix-game />
+    }
+  </div>
+</div>

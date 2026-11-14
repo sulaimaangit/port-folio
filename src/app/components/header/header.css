@@ -1,13 +1,18 @@
-.topbar {
+:host {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: block;
+}
+
+.topbar {
   height: 64px;
   padding: 0 max(32px, calc((100vw - 1160px) / 2));
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--paper);
+
 }
 
 .topbar nav {
@@ -20,6 +25,10 @@
 
 .topbar nav a {
   transition: opacity 0.2s;
+}
+
+.topbar nav a.home-link.current-route {
+  display: none;
 }
 
 .topbar nav a:hover {

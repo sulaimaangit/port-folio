@@ -9,32 +9,5 @@
       <a class="hero-action-link" routerLink="/work">Explore My Work <span>↗</span></a>
     </div>
   </div>
-  <div
-    class="hero-art"
-    role="img"
-    aria-label="Four electrons orbiting an atomic nucleus in three dimensions"
-    [class.is-dragging]="isDraggingAtom"
-    (pointerdown)="startAtomDrag($event)"
-    (pointermove)="moveAtom($event)"
-    (pointerup)="endAtomDrag($event)"
-    (pointercancel)="cancelAtomDrag($event)"
-  >
-    <div class="art-label" aria-hidden="true">IDEAS INTO<br>REALITY</div>
-    <div class="atom" aria-hidden="true">
-      <div class="orbit orbit-one">
-        <div class="orbit-rotator"><span class="electron"></span></div>
-      </div>
-      <div class="orbit orbit-two">
-        <div class="orbit-rotator"><span class="electron"></span></div>
-      </div>
-      <div class="orbit orbit-three">
-        <div class="orbit-rotator"><span class="electron"></span></div>
-      </div>
-      <div class="orbit orbit-four">
-        <div class="orbit-rotator"><span class="electron"></span></div>
-      </div>
-      <div class="nucleus"></div>
-    </div>
-  </div>
-  <div class="hero-foot"><span>BASED IN CHENNAI, INDIA</span></div>
+  <app-home-visual />
 </section>
