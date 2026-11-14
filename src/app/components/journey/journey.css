@@ -85,6 +85,11 @@
   content: '';
 }
 
+.timeline-row.current-role .timeline-content::before {
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
 .timeline-row h3 {
   margin: 0 0 8px;
   font-size: 17px;

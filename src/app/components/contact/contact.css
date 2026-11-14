@@ -34,6 +34,14 @@
   color: var(--accent);
 }
 
+.contact-intro {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.6vw, 17px);
+  line-height: 1.8;
+}
+
 .contact-choices {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -83,10 +91,15 @@
   outline-offset: 4px;
 }
 
+.contact-note {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .contact-email {
   display: inline-block;
   max-width: 100%;
-  margin-top: 8px;
   font-size: clamp(21px, 3vw, 34px);
   letter-spacing: -0.04em;
   border-bottom: 1px solid var(--line);
@@ -104,7 +117,7 @@
   display: flex;
   gap: 25px;
   margin-top: 70px;
-  font: 12px var(--mono);
+  font: 16px var(--mono);
   color: var(--muted);
 }
 

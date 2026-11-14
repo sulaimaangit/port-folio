@@ -1,9 +1,21 @@
-<header class="topbar">
+<header class="topbar" (keydown.escape)="closeMenu()">
   <a class="wordmark" routerLink="/" aria-label="Muhammad Sulaimaan, home">MS<span>.</span></a>
-  <nav aria-label="Main navigation">
-    <a routerLink="/journey">Journey</a>
-    <a routerLink="/work">Work</a>
-    <a routerLink="/about">About</a>
-    <a routerLink="/contact">Contact</a>
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-controls="primary-navigation"
+    [attr.aria-expanded]="isMenuOpen"
+    [attr.aria-label]="isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+    (click)="toggleMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="primary-navigation" aria-label="Main navigation" [class.is-open]="isMenuOpen">
+    <a routerLink="/journey" (click)="closeMenu()">Journey</a>
+    <a routerLink="/work" (click)="closeMenu()">Work</a>
+    <a routerLink="/about" (click)="closeMenu()">About</a>
+    <a routerLink="/contact" (click)="closeMenu()">Contact</a>
   </nav>
 </header>
