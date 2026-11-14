@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 82px;
+  height: 64px;
   padding: 0 max(32px, calc((100vw - 1160px) / 2));
   display: flex;
   align-items: center;
@@ -34,63 +34,53 @@
   gap: 14px;
 }
 
-.availability {
-  font-family: var(--mono);
-  font-size: 12px;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 9px;
-  white-space: nowrap;
-}
-
-.availability span {
-  width: 7px;
-  height: 7px;
-  background: #25f741;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px #d2e75b33;
-}
-
 .theme-toggle {
-  width: 40px;
-  height: 24px;
-  min-height: 24px;
-  flex: 0 0 45px;
-  padding: 3px;
-  display: flex;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  display: inline-flex;
   align-items: center;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-soft);
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.theme-toggle:hover {
-  border-color: var(--contact-accent);
-}
 
 .theme-toggle:focus-visible {
   outline: 2px solid var(--contact-accent);
   outline-offset: 3px;
 }
 
-.theme-toggle-knob {
-  width: 18px;
-  height: 18px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 12px;
-  line-height: 1;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+.theme-icon {
+  width: 22px;
+  height: 22px;
+  overflow: visible;
 }
 
-.theme-toggle.dark-mode .theme-toggle-knob {
-  transform: translateX(20px);
+.bulb-glass {
+  fill: #f4c542;
+  stroke: currentColor;
+  stroke-linejoin: round;
+  stroke-width: 1.6px;
+  transition: fill 0.2s ease;
+}
+
+.bulb-base {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6px;
+}
+
+.theme-toggle.dark-mode .bulb-glass {
+  fill: transparent;
 }
 
 @media (max-width: 760px) {
@@ -101,10 +91,6 @@
 
   .topbar nav {
     gap: 18px;
-  }
-
-  .availability {
-    display: none;
   }
 
   .header-actions {

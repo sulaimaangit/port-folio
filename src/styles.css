@@ -75,10 +75,12 @@ img {
   --line: #d9d8ce;
   --surface-soft: #e9e9dd;
   --surface-accent: #e7e8d9;
-  --surface-contrast: #1d2420;
   --text-soft: #65695f;
   --heading-soft: #8b8c80;
+  --contact-surface: var(--surface-soft);
   --contact-accent: #697927;
+  --footer-bg: #1d2420;
+  --footer-text: #bbbdb3;
   --mono: 'DM Mono', monospace;
   --sans: 'Manrope', sans-serif;
 }

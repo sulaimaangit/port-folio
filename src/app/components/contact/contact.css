@@ -1,7 +1,19 @@
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 .contact-section {
-  background: var(--surface-soft);
+  flex: 1;
+  background: var(--contact-surface);
   color: var(--ink);
-  padding: 100px 0 55px;
+  padding: 56px 0 0;
+}
+
+.contact-inner.section-wrap {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
 }
 
 .contact-inner .eyebrow {
@@ -9,32 +21,29 @@
 }
 
 .contact-inner h2 {
+  max-width: 100%;
   font-size: clamp(52px, 8vw, 100px);
   letter-spacing: -0.08em;
   line-height: 0.98;
   font-weight: 500;
   margin: 0;
+  text-wrap: balance;
 }
 
 .contact-inner h2 span {
   color: var(--contact-accent);
 }
 
-.contact-inner > p:not(.eyebrow) {
-  color: var(--muted);
-  font-size: 12px;
-  margin: 26px 0 35px;
-}
-
 .contact-choices {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  max-width: 900px;
-  margin: 0 0 32px;
+  max-width: 100%;
+  margin: 32px 0;
 }
 
 .contact-choice {
+  min-width: 0;
   min-height: 58px;
   padding: 15px 17px;
   border: 1px solid var(--line);
@@ -45,6 +54,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  line-height: 1.4;
   transition: background 0.2s, border-color 0.2s;
 }
 
@@ -68,11 +78,13 @@
 
 .contact-email {
   display: inline-block;
+  max-width: 100%;
   margin-top: 8px;
   font-size: clamp(21px, 3vw, 34px);
   letter-spacing: -0.04em;
   border-bottom: 1px solid var(--line);
   padding-bottom: 8px;
+  overflow-wrap: anywhere;
 }
 
 .contact-email span {
@@ -99,7 +111,7 @@
 
 @media (max-width: 760px) {
   .contact-section {
-    padding: 80px 0 40px;
+    padding: 40px 0 0;
   }
 
   .contact-choices {
@@ -121,16 +133,19 @@
 
 @media (max-width: 480px) {
   .contact-section {
-    padding-top: 68px;
+    padding-top: 32px;
   }
 
   .contact-inner h2 {
-    font-size: clamp(48px, 13vw, 68px);
+    font-size: clamp(36px, 11vw, 52px);
+  }
+
+  .contact-choices {
+    margin-top: 24px;
   }
 
   .contact-email {
     font-size: clamp(19px, 5.4vw, 26px);
-    overflow-wrap: anywhere;
   }
 
   .social-links {

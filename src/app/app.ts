@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header';
+import { FooterComponent } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, RouterLink, RouterOutlet],
+  imports: [HeaderComponent, FooterComponent, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  readonly currentYear = new Date().getFullYear();
   isDarkMode = localStorage.getItem('portfolio-theme') === 'dark';
 
   toggleTheme(): void {

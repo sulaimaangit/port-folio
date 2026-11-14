@@ -13,7 +13,7 @@
 .about-stamp {
   width: 220px;
   height: 220px;
-  border: 1px solid #aeb09e;
+  border: 1px solid var(--line);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
 }
 
 .about-stamp span {
-  color: #859535;
+  color: var(--contact-accent);
 }
 
 .about-copy .eyebrow {

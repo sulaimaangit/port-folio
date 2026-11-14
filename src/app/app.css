@@ -1,135 +1,16 @@
 .site-shell {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--paper);
   color: var(--ink);
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-footer {
-  background: var(--ink);
-  color: #bbbdb3;
-  border-top: 1px solid #3d433d;
-  padding: 22px max(48px, calc((100vw - 1160px) / 2));
+main {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font: 8px var(--mono);
-  letter-spacing: 0.06em;
-}
-
-footer .wordmark {
-  color: var(--paper);
-  font: 800 17px var(--sans);
-}
-
-footer > a:last-child {
-  color: var(--paper);
-}
-
-.dark-theme .topbar {
-  border-color: var(--line);
-}
-
-.dark-theme .availability {
-  color: #d5dbd1;
-}
-
-.dark-theme .hero h1 span {
-  color: #b4bcad;
-}
-
-.dark-theme .intro {
-  color: #c4cbc1;
-}
-
-.dark-theme .hero-art {
-  background: #29342c;
-}
-
-.dark-theme .art-label,
-.dark-theme .art-index {
-  color: #e0e5d9;
-}
-
-.dark-theme .hero-foot {
-  color: #c1c9be;
-}
-
-.dark-theme .section-note,
-.dark-theme .project-meta p,
-.dark-theme .project-meta > span {
-  color: #b8c0b6;
-}
-
-.dark-theme .about-section {
-  background: #242d26;
-}
-
-.dark-theme .about-stamp {
-  border-color: #657267;
-}
-
-.dark-theme .about-copy > p:not(.eyebrow) {
-  color: #c4cbc1;
-}
-
-.dark-theme .skills span {
-  border-color: #536055;
-  color: #dbe0d7;
-}
-
-.dark-theme .timeline-row p,
-.dark-theme .timeline-date,
-.dark-theme .timeline-location {
-  color: #bbc3b9;
-}
-
-.dark-theme .button-dark {
-  background: var(--green);
-  color: #1d2420;
-}
-
-.dark-theme .button-dark span {
-  color: #1d2420;
-}
-
-.dark-theme .contact-section,
-.dark-theme footer {
-  background: #101512;
-  color: #f5f3ed;
-}
-
-.dark-theme .contact-choice {
-  color: #f5f3ed;
-  border-color: #59645b;
-}
-
-.dark-theme .contact-choice:hover,
-.dark-theme .contact-choice:focus-visible {
-  background: rgba(210, 231, 91, 0.1);
-  border-color: #87935c;
-}
-
-.dark-theme footer .wordmark,
-.dark-theme footer > a:last-child {
-  color: #f5f3ed;
-}
-
-.dark-theme .theme-toggle:hover {
-  background: rgba(210, 231, 91, 0.12);
-  border-color: #87935c;
-}
-
-@media (max-width: 760px) {
-  footer {
-    padding: 20px;
-    gap: 12px;
-  }
-
-  footer > span {
-    text-align: center;
-    font-size: 7px;
-  }
+  flex-direction: column;
 }
 
 .dark-theme {
@@ -139,8 +20,10 @@ footer > a:last-child {
   --line: #3d4840;
   --surface-soft: #242d26;
   --surface-accent: #29342c;
-  --surface-contrast: #101512;
   --text-soft: #c4cbc1;
   --heading-soft: #b4bcad;
+  --contact-surface: #101512;
   --contact-accent: #d2e75b;
+  --footer-bg: #101512;
+  --footer-text: #f5f3ed;
 }
