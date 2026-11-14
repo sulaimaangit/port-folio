@@ -6,7 +6,7 @@
 
 .contact-section {
   flex: 1;
-  background: var(--contact-surface);
+  background: var(--paper);
   color: var(--ink);
   padding: 56px 0 0;
 }
@@ -31,7 +31,7 @@
 }
 
 .contact-inner h2 span {
-  color: var(--contact-accent);
+  color: var(--accent);
 }
 
 .contact-choices {
@@ -47,6 +47,7 @@
   min-height: 58px;
   padding: 15px 17px;
   border: 1px solid var(--line);
+  background: var(--surface-soft);
   color: var(--ink);
   font-size: 13px;
   font-weight: 700;
@@ -59,20 +60,26 @@
 }
 
 .contact-choice span {
-  color: var(--contact-accent);
+  color: var(--accent);
   font-size: 16px;
 }
 
 .contact-choice:hover,
 .contact-choice:focus-visible {
-  background: rgba(132, 150, 45, 0.12);
-  border-color: #87935c;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.contact-choice:hover span,
+.contact-choice:focus-visible span {
+  color: var(--accent-foreground);
 }
 
 .contact-choice:focus-visible,
 .social-links a:focus-visible,
 .contact-email:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -89,7 +96,7 @@
 
 .contact-email span {
   font-size: 16px;
-  color: var(--contact-accent);
+  color: var(--accent);
   margin-left: 12px;
 }
 

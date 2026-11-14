@@ -10,7 +10,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--sans);
+  font-family: var(--mono);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -43,7 +43,7 @@ img {
 }
 
 .wordmark span {
-  color: #84962d;
+  color: var(--accent);
 }
 
 .eyebrow {
@@ -56,7 +56,7 @@ img {
 .eyebrow-line {
   display: inline-block;
   width: 27px;
-  border-top: 1px solid #879335;
+  border-top: 1px solid var(--accent);
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -68,19 +68,18 @@ img {
 }
 
 :root {
-  --paper: #f5f3ed;
-  --ink: #1d2420;
-  --muted: #767a70;
-  --green: #d2e75b;
-  --line: #d9d8ce;
-  --surface-soft: #e9e9dd;
-  --surface-accent: #e7e8d9;
-  --text-soft: #65695f;
-  --heading-soft: #8b8c80;
-  --contact-surface: var(--surface-soft);
-  --contact-accent: #697927;
-  --footer-bg: #1d2420;
-  --footer-text: #bbbdb3;
+  --paper: #020805;
+  --ink: #c2ffd0;
+  --muted: #63ad74;
+  --accent: #00ff41;
+  --accent-soft: #0c6b2e;
+  --accent-foreground: #001407;
+  --line: #145c2b;
+  --surface-soft: #07190d;
+  --surface-accent: #0b2111;
+  --text-soft: #97eaaa;
+  --heading-soft: #51ff78;
+  --footer-bg: #010402;
+  --footer-text: #9cf4ac;
   --mono: 'DM Mono', monospace;
-  --sans: 'Manrope', sans-serif;
 }

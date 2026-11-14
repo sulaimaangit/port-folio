@@ -4,26 +4,10 @@
   flex-direction: column;
   background: var(--paper);
   color: var(--ink);
-  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.dark-theme {
-  --paper: #1a201c;
-  --ink: #eef1e9;
-  --muted: #b4bbb0;
-  --line: #3d4840;
-  --surface-soft: #242d26;
-  --surface-accent: #29342c;
-  --text-soft: #c4cbc1;
-  --heading-soft: #b4bcad;
-  --contact-surface: #101512;
-  --contact-accent: #d2e75b;
-  --footer-bg: #101512;
-  --footer-text: #f5f3ed;
 }

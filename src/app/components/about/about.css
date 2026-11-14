@@ -1,5 +1,5 @@
 .about-section {
-  background: var(--surface-soft);
+  background: var(--paper);
   padding: 115px 0;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .about-stamp span {
-  color: var(--contact-accent);
+  color: var(--accent);
 }
 
 .about-copy .eyebrow {

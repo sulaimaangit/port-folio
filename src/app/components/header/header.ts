@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -7,7 +7,4 @@ import { RouterLink } from '@angular/router';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class HeaderComponent {
-  @Input() isDarkMode = false;
-  @Output() themeToggle = new EventEmitter<void>();
-}
+export class HeaderComponent {}

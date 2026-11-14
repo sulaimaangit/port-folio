@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--line);
   background: var(--paper);
 }
 
@@ -27,62 +26,6 @@
   opacity: 0.55;
 }
 
-.header-actions {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 14px;
-}
-
-.theme-toggle {
-  width: 44px;
-  height: 44px;
-  min-height: 44px;
-  flex: 0 0 44px;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--contact-accent);
-  outline-offset: 3px;
-}
-
-.theme-icon {
-  width: 22px;
-  height: 22px;
-  overflow: visible;
-}
-
-.bulb-glass {
-  fill: #f4c542;
-  stroke: currentColor;
-  stroke-linejoin: round;
-  stroke-width: 1.6px;
-  transition: fill 0.2s ease;
-}
-
-.bulb-base {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.6px;
-}
-
-.theme-toggle.dark-mode .bulb-glass {
-  fill: transparent;
-}
-
 @media (max-width: 760px) {
   .topbar {
     height: 68px;
@@ -92,10 +35,6 @@
   .topbar nav {
     gap: 18px;
   }
-
-  .header-actions {
-    gap: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -104,7 +43,7 @@
   }
 
   .topbar nav {
-    gap: 6px;
-    font-size: 13px;
+    gap: 3px;
+    font-size: 12px;
   }
 }

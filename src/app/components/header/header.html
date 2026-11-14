@@ -6,12 +6,4 @@
     <a routerLink="/about">About</a>
     <a routerLink="/contact">Contact</a>
   </nav>
-  <div class="header-actions">
-    <button class="theme-toggle" type="button" (click)="themeToggle.emit()" [class.dark-mode]="isDarkMode" [attr.aria-pressed]="isDarkMode" [attr.aria-label]="isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'">
-      <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path class="bulb-glass" d="M9 18h6c.1-1.5.7-2.7 1.8-3.8A7 7 0 1 0 7.2 14.2C8.3 15.3 8.9 16.5 9 18Z" />
-        <path class="bulb-base" d="M9 18h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1Zm1 3h4m-3 1h2" />
-      </svg>
-    </button>
-  </div>
 </header>
