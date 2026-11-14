@@ -25,3 +25,11 @@ npm run build
 ```
 
 The built static site is written to `dist/`.
+
+## Automatic hosting
+
+The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` builds and deploys the site to GitHub Pages whenever a commit is pushed to `main`. After the first workflow run, the site is available at:
+
+<https://sulaimaangit.github.io/port-folio/>
+
+In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions** if it is not already selected. Each successful deployment updates the hosted site automatically.
