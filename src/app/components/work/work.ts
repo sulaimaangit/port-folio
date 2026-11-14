@@ -5,5 +5,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-work',
   imports: [RouterLink],
   templateUrl: './work.html',
+  styleUrl: './work.css',
 })
 export class WorkComponent {}

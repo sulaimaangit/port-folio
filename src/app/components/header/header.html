@@ -7,8 +7,8 @@
   </nav>
   <div class="header-actions">
     <a class="availability" routerLink="/contact"><span></span> Available for opportunities</a>
-    <button class="theme-toggle" type="button" (click)="themeToggle.emit()" [attr.aria-pressed]="isDarkMode" [attr.aria-label]="isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'">
-      <span aria-hidden="true">{{ isDarkMode ? '☀' : '☾' }}</span>
+    <button class="theme-toggle" type="button" (click)="themeToggle.emit()" [class.dark-mode]="isDarkMode" [attr.aria-pressed]="isDarkMode" [attr.aria-label]="isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'">
+      <span class="theme-toggle-knob" aria-hidden="true">{{ isDarkMode ? '☾' : '☀' }}</span>
     </button>
   </div>
 </header>

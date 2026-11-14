@@ -1,0 +1,139 @@
+.contact-section {
+  background: var(--surface-soft);
+  color: var(--ink);
+  padding: 100px 0 55px;
+}
+
+.contact-inner .eyebrow {
+  color: var(--muted);
+}
+
+.contact-inner h2 {
+  font-size: clamp(52px, 8vw, 100px);
+  letter-spacing: -0.08em;
+  line-height: 0.98;
+  font-weight: 500;
+  margin: 0;
+}
+
+.contact-inner h2 span {
+  color: var(--contact-accent);
+}
+
+.contact-inner > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 26px 0 35px;
+}
+
+.contact-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 0 32px;
+}
+
+.contact-choice {
+  min-height: 58px;
+  padding: 15px 17px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.contact-choice span {
+  color: var(--contact-accent);
+  font-size: 16px;
+}
+
+.contact-choice:hover,
+.contact-choice:focus-visible {
+  background: rgba(132, 150, 45, 0.12);
+  border-color: #87935c;
+}
+
+.contact-choice:focus-visible,
+.social-links a:focus-visible,
+.contact-email:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: clamp(21px, 3vw, 34px);
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.contact-email span {
+  font-size: 16px;
+  color: var(--contact-accent);
+  margin-left: 12px;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 70px;
+  font: 12px var(--mono);
+  color: var(--muted);
+}
+
+.social-links a {
+  transition: opacity 0.2s;
+}
+
+.social-links a:hover {
+  opacity: 0.55;
+}
+
+@media (max-width: 760px) {
+  .contact-section {
+    padding: 80px 0 40px;
+  }
+
+  .contact-choices {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    gap: 10px;
+  }
+
+  .contact-choice {
+    min-height: 54px;
+  }
+
+  .social-links {
+    margin-top: 55px;
+    gap: 12px 22px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding-top: 68px;
+  }
+
+  .contact-inner h2 {
+    font-size: clamp(48px, 13vw, 68px);
+  }
+
+  .contact-email {
+    font-size: clamp(19px, 5.4vw, 26px);
+    overflow-wrap: anywhere;
+  }
+
+  .social-links {
+    margin-top: 42px;
+  }
+}

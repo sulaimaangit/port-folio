@@ -1,0 +1,124 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 82px;
+  padding: 0 max(32px, calc((100vw - 1160px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.topbar nav {
+  display: flex;
+  flex-shrink: 0;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.topbar nav a {
+  transition: opacity 0.2s;
+}
+
+.topbar nav a:hover {
+  opacity: 0.55;
+}
+
+.header-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+}
+
+.availability {
+  font-family: var(--mono);
+  font-size: 12px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+}
+
+.availability span {
+  width: 7px;
+  height: 7px;
+  background: #25f741;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #d2e75b33;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 24px;
+  min-height: 24px;
+  flex: 0 0 45px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--contact-accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--contact-accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle-knob {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle.dark-mode .theme-toggle-knob {
+  transform: translateX(20px);
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    height: 68px;
+    padding: 0 20px;
+  }
+
+  .topbar nav {
+    gap: 18px;
+  }
+
+  .availability {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 18px;
+  }
+
+  .topbar nav {
+    gap: 6px;
+    font-size: 13px;
+  }
+}
