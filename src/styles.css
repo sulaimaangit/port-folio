@@ -32,7 +32,7 @@ img {
 }
 
 .section-wrap {
-  width: min(1160px, calc(100% - 96px));
+  width: min(1160px, calc(100% - clamp(40px, 8vw, 96px)));
   margin: 0 auto;
 }
 
@@ -61,11 +61,6 @@ img {
   margin-right: 10px;
 }
 
-@media (max-width: 760px) {
-  .section-wrap {
-    width: calc(100% - 40px);
-  }
-}
 
 :root {
   --paper: #020805;
