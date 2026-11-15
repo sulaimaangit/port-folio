@@ -27,86 +27,124 @@
   color: var(--heading-soft);
 }
 
-.journey-note {
-  margin: 0 0 6px;
-  padding-left: 18px;
-  border-left: 1px solid var(--accent);
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.timeline {
+.timeline-entry {
   position: relative;
-  border-top: 1px solid var(--line);
+  padding: 18px 0;
 }
 
-.timeline::before {
+.timeline-entry:not(:last-child)::after {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 196px;
+  top: 37.5px;
+  bottom: -37.5px;
+  left: 215.5px;
   width: 1px;
   background: var(--line);
   content: '';
 }
 
-.timeline-row {
+.timeline-trigger {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr) 120px;
-  gap: 32px;
+  grid-template-columns: 180px 12px minmax(0, 1fr) 12px;
+  gap: 30px;
   align-items: start;
-  padding: 27px 0;
-  border-bottom: 1px solid var(--line);
+  width: 100%;
+  padding: 9px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.timeline-date,
-.timeline-location {
+.timeline-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.timeline-date {
   padding-top: 4px;
   color: var(--muted);
   font: 10px var(--mono);
   letter-spacing: 0.04em;
 }
 
-.timeline-content {
+.timeline-marker {
   position: relative;
-  min-width: 0;
-}
-
-.timeline-content::before {
-  position: absolute;
-  top: 4px;
-  left: -22px;
+  z-index: 1;
   width: 11px;
   height: 11px;
+  margin-top: 5px;
   border: 2px solid var(--accent);
   border-radius: 50%;
   background: var(--paper);
-  content: '';
+  transition: background-color 160ms ease, box-shadow 160ms ease;
 }
 
-.timeline-row.current-role .timeline-content::before {
+.timeline-entry:last-child .timeline-marker {
   background: var(--accent);
   box-shadow: 0 0 10px var(--accent);
 }
 
-.timeline-row h3 {
-  margin: 0 0 8px;
+.timeline-content {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.timeline-title {
   font-size: 17px;
   line-height: 1.45;
   letter-spacing: -0.02em;
 }
 
-.timeline-row p {
-  margin: 0;
+.timeline-summary {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.7;
 }
 
-.timeline-location {
-  text-align: right;
-  letter-spacing: 0.08em;
+.timeline-chevron {
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-right: 1px solid var(--muted);
+  border-bottom: 1px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+.timeline-entry.is-expanded .timeline-chevron {
+  transform: translateY(4px) rotate(225deg);
+}
+
+.timeline-entry.is-expanded .timeline-marker {
+  background: var(--accent);
+}
+
+.timeline-details {
+  display: grid;
+  grid-template-columns: 180px 12px minmax(0, 1fr) 12px;
+  gap: 30px;
+}
+
+.timeline-details[hidden] {
+  display: none;
+}
+
+.timeline-details ul {
+  grid-column: 3;
+  margin: 0;
+  padding: 0 0 0 17px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-marker,
+  .timeline-chevron {
+    transition: none;
+  }
 }
 
 @media (max-width: 760px) {
@@ -125,25 +163,14 @@
     font-size: clamp(44px, 8vw, 62px);
   }
 
-  .journey-note {
-    max-width: 360px;
-  }
-
-  .timeline::before {
-    left: 139px;
-  }
-
-  .timeline-row {
-    grid-template-columns: 130px minmax(0, 1fr);
+  .timeline-trigger,
+  .timeline-details {
+    grid-template-columns: 130px 12px minmax(0, 1fr) 12px;
     gap: 18px;
   }
 
-  .timeline-content::before {
-    left: -15px;
-  }
-
-  .timeline-location {
-    display: none;
+  .timeline-entry:not(:last-child)::after {
+    left: 153.5px;
   }
 }
 
@@ -162,18 +189,20 @@
     font-size: clamp(38px, 10.5vw, 48px);
   }
 
-  .timeline::before {
-    left: 102px;
+  .timeline-entry {
+    padding: 14px 0;
   }
 
-  .timeline-row {
-    grid-template-columns: 94px minmax(0, 1fr);
-    gap: 16px;
-    padding: 22px 0;
+  .timeline-entry:not(:last-child)::after {
+    top: 33.5px;
+    bottom: -33.5px;
+    left: 113.5px;
   }
 
-  .timeline-content::before {
-    left: -14px;
+  .timeline-trigger,
+  .timeline-details {
+    grid-template-columns: 94px 11px minmax(0, 1fr) 8px;
+    gap: 14px;
   }
 
   .timeline-date {
@@ -181,7 +210,7 @@
     line-height: 1.5;
   }
 
-  .timeline-row h3 {
+  .timeline-title {
     font-size: 15px;
   }
 }

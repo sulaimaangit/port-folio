@@ -1,9 +1,29 @@
 <section class="about-section">
   <div class="about-inner section-wrap">
     <div class="about-copy">
-      <h1>Engineering with<br><span>purpose and curiosity.</span></h1>
-      <p>I’m a Java Full Stack Developer with two years of experience building Spring Boot services and Angular applications. My work includes REST APIs, microservices, AWS deployments, CI/CD, and production support. I enjoy owning work from implementation through delivery and collaborating closely with clients and teammates.</p>
-      <p>I’m also enthusiastic about extracurricular activities and enjoy opportunities to explore new interests, learn, and collaborate beyond my day-to-day work.</p>
+      <h1>Engineering with<br /><span>purpose and curiosity.</span></h1>
+      <p>
+        I'm a Java Full Stack Developer with two years of experience building Spring Boot services
+        and Angular applications. I started as an intern, grew into backend development, and now
+        work in production support, where I get to do what I enjoy most: debugging and deployments.
+        I'm usually the go-to person when something breaks, because I like digging until I find the
+        root cause, and I pick up the tools around an application quickly.
+      </p>
+
+      <p>
+        Some of my best lessons came from the hardest moments. Spring beans took me a while to
+        grasp, until consistent practice finally made the flow of objects click. In production, I
+        once traced a failed bill confirmation to a persistent lock in the code that was blocking
+        the database from inserting data, the kind of bug that only shows up when real users are
+        involved. I'm always looking for ways to automate and simplify my work, which is what pulls
+        me toward DevOps.
+      </p>
+
+      <p>
+        Outside of work, I am active in sports and review movies on Letterboxd, especially films that
+        teach me something about the world and art. At the core of it all, I like solving problems,
+        whether it's a stubborn bug, a tricky rally, or a story worth thinking about.
+      </p>
       <p class="skills-label">CORE TECHNOLOGIES</p>
       <ul class="skills" aria-label="Core technologies">
         <li>Java &amp; Spring Boot</li>
@@ -11,21 +31,61 @@
         <li>AWS &amp; CI/CD</li>
         <li>Microservices</li>
         <li>SQL &amp; PostgreSQL</li>
+        <li>Linux</li>
+        <li>Git &amp; Version Control</li>
       </ul>
     </div>
-    <aside class="about-role-card" aria-label="Professional focus">
-      <div class="role-card-top">
-        <span class="role-status" aria-hidden="true"></span>
+    <aside class="skills-terminal" aria-label="Interactive skills terminal">
+      <div class="terminal-header">
+        <div class="terminal-header-title">
+          <span class="terminal-lights" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>TERMINAL</span>
+        </div>
+        <span class="terminal-status">LOCAL SESSION</span>
       </div>
-      <div class="role-card-main">
-        <p class="role-kicker">BUILDING ACROSS THE STACK</p>
-        <h2 class="role-title">Java Full Stack<br><span>Developer <span class="typing-cursor" aria-hidden="true"></span></span></h2>
+
+      <div class="terminal-history" aria-live="polite" aria-label="Terminal output">
+        @for (entry of terminalHistory; track $index) {
+          <div class="terminal-entry">
+            <p class="terminal-command">
+              <span class="terminal-command-prompt">C:\portfolio&gt;</span>{{ entry.command }}
+            </p>
+            @for (line of entry.output; track $index) {
+              <p class="terminal-output">{{ line }}</p>
+            }
+          </div>
+        }
       </div>
-      <div class="role-card-bottom">
-        <span>BACK END</span>
-        <span class="role-connector" aria-hidden="true"></span>
-        <span>FRONT END</span>
-      </div>
+
+      <form class="terminal-prompt" (submit)="runCommand($event)">
+        <label class="visually-hidden" for="skills-terminal-input">Enter a terminal command</label>
+        <span class="terminal-command-prompt" aria-hidden="true">C:\portfolio&gt;</span>
+        <span class="terminal-input-wrap">
+          <input
+            id="skills-terminal-input"
+            type="text"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            aria-describedby="skills-terminal-hint"
+            [value]="command"
+            (input)="updateCommand($event)"
+            (click)="updateCursorPosition($event)"
+            (keyup)="updateCursorPosition($event)"
+            (select)="updateCursorPosition($event)"
+          />
+          <span #cursorMeasure class="terminal-cursor-measure" aria-hidden="true"></span>
+          <span class="terminal-cursor" [style.left.px]="cursorLeft" aria-hidden="true"></span>
+        </span>
+        <button class="terminal-clear" type="button" (click)="clearTerminal()">CLEAR</button>
+        <button type="submit">RUN</button>
+      </form>
+      <p class="terminal-hint" id="skills-terminal-hint">
+        Try <code>whoami</code>, <code>ls skills/</code>, or
+        <code>help</code>
+      </p>
     </aside>
   </div>
 </section>

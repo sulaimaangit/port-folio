@@ -5,29 +5,35 @@
     </div>
   </div>
   <div class="timeline" aria-label="Education and experience timeline">
-    <article class="timeline-row">
-      <span class="timeline-date">2019 — 2023</span>
-      <div class="timeline-content">
-        <h3>B.E. Mechatronics Engineering · Sona College of Engineering</h3>
-        <p>Bachelor of Engineering</p>
-      </div>
-      <span class="timeline-location">INDIA</span>
-    </article>
-    <article class="timeline-row">
-      <span class="timeline-date">DEC 2022 — FEB 2023</span>
-      <div class="timeline-content">
-        <h3>Java Full Stack Engineer Intern · LTIMindtree</h3>
-        <p>Spring Boot, Angular</p>
-      </div>
-      <span class="timeline-location">REMOTE</span>
-    </article>
-    <article class="timeline-row current-role">
-      <span class="timeline-date">2024 — NOW</span>
-      <div class="timeline-content">
-        <h3>Software Engineer · LTM </h3>
-        <p>Java and Spring Boot services, Angular applications, AWS deployments, and end-to-end delivery.</p>
-      </div>
-      <span class="timeline-location">CHENNAI</span>
-    </article>
+    @for (entry of entries; track entry.id) {
+      <article class="timeline-entry" [class.is-expanded]="expandedJourneyId === entry.id">
+        <button
+          class="timeline-trigger"
+          type="button"
+          [attr.aria-expanded]="expandedJourneyId === entry.id"
+          [attr.aria-controls]="'journey-details-' + entry.id"
+          (click)="toggleEntry(entry.id)"
+        >
+          <span class="timeline-date">{{ entry.date }}</span>
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <span class="timeline-content">
+            <span class="timeline-title">{{ entry.title }}</span>
+            <span class="timeline-summary">{{ entry.summary }}</span>
+          </span>
+          <span class="timeline-chevron" aria-hidden="true"></span>
+        </button>
+        <div
+          class="timeline-details"
+          [id]="'journey-details-' + entry.id"
+          [hidden]="expandedJourneyId !== entry.id"
+        >
+          <ul>
+            @for (detail of entry.details; track detail) {
+              <li>{{ detail }}</li>
+            }
+          </ul>
+        </div>
+      </article>
+    }
   </div>
 </section>
