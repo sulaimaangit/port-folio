@@ -1,5 +1,5 @@
 <header class="topbar" (keydown.escape)="closeMenu()">
-  <a class="wordmark" routerLink="/" aria-label="Muhammad Sulaimaan, home">MS<span>.</span></a>
+  <a class="wordmark" routerLink="/" (click)="scrollToSection('home')" aria-label="Muhammad Sulaimaan, home">MS<span>.</span></a>
   <button
     class="menu-toggle"
     type="button"
@@ -14,9 +14,9 @@
   </button>
   <nav id="primary-navigation" aria-label="Main navigation" [class.is-open]="isMenuOpen">
     <!-- <a class="home-link" routerLink="/" routerLinkActive="current-route" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a> -->
-    <a routerLink="/journey" (click)="closeMenu()">Journey</a>
-    <a routerLink="/work" (click)="closeMenu()">Work</a>
-    <a routerLink="/about" (click)="closeMenu()">Overview</a>
-    <a routerLink="/connect" (click)="closeMenu()">Connect!</a>
+    <a routerLink="/about" (click)="closeMenu(); scrollToSection('about')">Overview</a>
+    <a routerLink="/journey" (click)="closeMenu(); scrollToSection('journey')">Journey</a>
+    <a routerLink="/work" (click)="closeMenu(); scrollToSection('work')">Work</a>
+    <a routerLink="/connect" (click)="closeMenu(); scrollToSection('connect')">Connect!</a>
   </nav>
 </header>

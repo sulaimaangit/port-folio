@@ -6,27 +6,16 @@
   </div>
   <div class="timeline" aria-label="Education and experience timeline">
     @for (entry of entries; track entry.id) {
-      <article class="timeline-entry" [class.is-expanded]="expandedJourneyId === entry.id">
-        <button
-          class="timeline-trigger"
-          type="button"
-          [attr.aria-expanded]="expandedJourneyId === entry.id"
-          [attr.aria-controls]="'journey-details-' + entry.id"
-          (click)="toggleEntry(entry.id)"
-        >
+      <article class="timeline-entry">
+        <div class="timeline-row">
           <span class="timeline-date">{{ entry.date }}</span>
           <span class="timeline-marker" aria-hidden="true"></span>
           <span class="timeline-content">
             <span class="timeline-title">{{ entry.title }}</span>
             <span class="timeline-summary">{{ entry.summary }}</span>
           </span>
-          <span class="timeline-chevron" aria-hidden="true"></span>
-        </button>
-        <div
-          class="timeline-details"
-          [id]="'journey-details-' + entry.id"
-          [hidden]="expandedJourneyId !== entry.id"
-        >
+        </div>
+        <div class="timeline-details">
           <ul>
             @for (detail of entry.details; track detail) {
               <li>{{ detail }}</li>

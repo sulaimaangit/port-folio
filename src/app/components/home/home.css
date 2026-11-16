@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  padding: 35px 0 95px;
+  padding: 64px 0 95px;
 }
 
 .hero h1 {
@@ -78,7 +78,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 48px 0 92px;
+    padding: 56px 0 92px;
   }
 
   .hero h1 {

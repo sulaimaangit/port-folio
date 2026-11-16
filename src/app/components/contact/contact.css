@@ -7,7 +7,7 @@
 .contact-section {
   flex: 1;
   color: var(--ink);
-  padding: 56px 0 0;
+  padding: 56px 0 96px;
 }
 
 .contact-inner.section-wrap {
@@ -130,7 +130,7 @@
 
 @media (max-width: 760px) {
   .contact-section {
-    padding: 40px 0 0;
+    padding: 40px 0 72px;
   }
 
   .contact-choices {
@@ -152,7 +152,7 @@
 
 @media (max-width: 480px) {
   .contact-section {
-    padding-top: 32px;
+    padding: 32px 0 56px;
   }
 
   .contact-inner h2 {

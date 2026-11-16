@@ -14,8 +14,6 @@ interface JourneyEntry {
   styleUrl: './journey.css',
 })
 export class JourneyComponent {
-  expandedJourneyId: string | null = null;
-
   readonly entries: JourneyEntry[] = [
     {
       id: 'mechatronics-degree',
@@ -43,7 +41,7 @@ export class JourneyComponent {
     },
     {
       id: 'ltm-software-engineer',
-      date: '2024 — PRESENT',
+      date: 'JUN 2024 — PRESENT',
       title: 'Software Engineer · LTM',
       summary:
         'Java and Spring Boot services, Angular applications, AWS deployments, and end-to-end delivery.',
@@ -60,7 +58,4 @@ export class JourneyComponent {
     },
   ];
 
-  toggleEntry(id: string): void {
-    this.expandedJourneyId = this.expandedJourneyId === id ? null : id;
-  }
 }

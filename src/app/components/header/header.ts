@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { scrollToSection as scrollToPageSection } from '../../utils/scroll-to-section';
 
 @Component({
   selector: 'app-header',
@@ -16,5 +17,9 @@ export class HeaderComponent {
 
   closeMenu(): void {
     this.isMenuOpen = false;
+  }
+
+  scrollToSection(id: string): void {
+    scrollToPageSection(id);
   }
 }
