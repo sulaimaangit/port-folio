@@ -30,8 +30,8 @@ export class JourneyComponent {
     {
       id: 'ltimindtree-internship',
       date: 'DEC 2022 — FEB 2023',
-      title: 'Java Full Stack Engineer Intern · LTIMindtree',
-      summary: 'Spring Boot, Angular',
+      title: 'Internship · LTIMindtree',
+      summary: 'Intern Trainee',
       details: [
         'Engineered backend modules using Java OOP principles and Spring Boot during my internship.',
         'Designed responsive Angular interfaces and integrated them seamlessly with backend REST APIs.',
@@ -44,7 +44,7 @@ export class JourneyComponent {
       date: 'JUN 2024 — PRESENT',
       title: 'Software Engineer · LTM',
       summary:
-        'Java and Spring Boot services, Angular applications, AWS deployments, and end-to-end delivery.',
+        'Backend and Frontend Development, Production Support, and Application Stabilization',
       details: [
         'Developed and enhanced backend features using Java and Spring Boot in a full-time development role.',
         'Built and maintained REST APIs that supported key application functionality.',
